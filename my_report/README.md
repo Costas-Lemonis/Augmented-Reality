@@ -3,7 +3,7 @@
 ### First and Last Name: Konstantinos Lemonis
 ### University Registration Number: dpsd19065
 ### GitHub Personal Profile: https://github.com/Costas-Lemonis
-### Augmented Reality Personal Repository: https://costas-lemonis.github.io/Augmented-Reality/
+### Augmented Reality Personal Repository: https://github.com/Costas-Lemonis/Augmented-Reality
 
 # Introduction
 
