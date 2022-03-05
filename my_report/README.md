@@ -23,4 +23,4 @@
 
 
 # Sources
-https://coolors.co/083d77-ebebd3-f4d35e-ee964b-f95738 για τα χρώματα.
+[Color Palettes](https://coolors.co/083d77-ebebd3-f4d35e-ee964b-f95738).
