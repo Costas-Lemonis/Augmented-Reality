@@ -21,10 +21,17 @@
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
         <a-marker preset="hiro">
-            <a-entity id="box" geometry="primitive: box; width: 2; depth: 2; height: 2" position="0 0 0" material="color: #083D77"></a-entity>
-            <a-entity id="cylinder" geometry="primitive: cylinder; width: 1; depth: 1; height: 4" position="2.5 0 -2" material="color: #F4D35E"></a-entity>
-            <a-entity id="sphere" geometry="primitive: sphere; width: 2; depth: 2; height: 2" position="-2.5 0 -2" material="color: #F95738"></a-entity>
-            <a-entity position="0 2.25 -15" particle-system="preset: snow"></a-entity>
+            <a-entity id="box" geometry="primitive: box; width: 0.9; depth: 0.9; height: 0.9" position="0 0 0" material="color: #083D77"></a-entity>
+
+            <a-entity id="cylinder" geometry="primitive: cylinder; height: 2; radius: 0.5" position="1.0 0 -1" material="color: #F4D35E"></a-entity>
+
+            <a-entity id="sphere" geometry="primitive: sphere; radius: 0.5" position="-1.0 0 -1" material="color: #F95738"></a-entity>
+
+            <a-entity position="0 2.0 -15" particle-system="preset: snow"
+            speech-command__startsnowing="command: start; type: attribute; attribute: visible; value: true;"
+              speech-command__stopsnowing="command: stop; type: attribute; attribute: visible; value: false;">
+            ></a-entity>
+            
         </a-marker>
         <a-entity camera></a-entity>
         </a-scene>
