@@ -28,10 +28,9 @@
             <a-entity id="sphere" geometry="primitive: sphere; radius: 0.5" position="-1.0 0 -1" material="color: #F95738"></a-entity>
             
             <a-entity id="annyang" annyang-speech-recognition></a-entity>
-            
-            <a-entity id="snowing" position="0 2.0 -15" particle-system="preset: snow"
-              speech-command__start="command: start snowing; type: attribute; attribute: visible; value: true;"
+            <a-entity id="snowing" speech-command__start="command: start snowing; type: attribute; attribute: visible; value: true;"
               speech-command__stop="command: stop snowing; type: attribute; attribute: visible; value: false;"
+            <a-snow position="0 2.0 -15" particle-system="preset: snow"></a-snow>
             ></a-entity>
             
         </a-marker>
