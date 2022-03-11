@@ -27,8 +27,12 @@
 
             <a-entity id="sphere" geometry="primitive: sphere; radius: 0.5" position="-1.0 0 -1" material="color: #F95738"></a-entity>
           
+            <a-entity id="annyang" annyang-speech-recognition></a-entity>
             
-            <a-entity position="0 2.0 -15" particle-system="preset: snow"></a-entity>
+            <a-entity position="0 2.0 -15" particle-system="preset: snow"
+                speech-command__show="command: start;
+                speech-command__hide="command: stop;
+            ></a-entity>
             
         </a-marker>
         <a-entity camera></a-entity>
