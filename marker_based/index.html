@@ -4,14 +4,14 @@
     <!-- we import arjs version without NFT but with marker + location based support -->
     <!--<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>-->
     <script src="build/aframe-ar.js"></script>
-    
+
     <!-- particles system component -->
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-    
+
     <!-- speech command component -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
-    <script src="build/aframe-speech-command-component.js"></script> 
-    
+    <script src="build/aframe-speech-command-component.js"></script>
+
 
     <body style="margin : 0px; overflow: hidden;">
         <a-scene
@@ -26,13 +26,15 @@
             <a-entity id="cylinder" geometry="primitive: cylinder; height: 2; radius: 0.5" position="1.0 0 -1" material="color: #F4D35E"></a-entity>
 
             <a-entity id="sphere" geometry="primitive: sphere; radius: 0.5" position="-1.0 0 -1" material="color: #F95738"></a-entity>
-            
+
             <a-entity id="annyang" annyang-speech-recognition></a-entity>
-            <a-entity id="snowing" speech-command__start="command: start snowing; type: attribute; attribute: visible; value: true;"
-            speech-command__stop="command: stop snowing; type: attribute; attribute: visible; value: false;"
-            <a-snoww position="0 2.0 -15" particle-system="preset: snow"></a-snoww>
-            ></a-entity>
-            
+
+            <a-entity id="menu"
+              speech-command__show="command: show menu; type: attribute; attribute: visible; value: true;"
+              speech-command__hide="command: hide menu; type: attribute; attribute: visible; value: false;">
+            <a-entity position="0 2.25 -15" particle-system="preset: snow"></a-entity>
+            </a-entity>
+
         </a-marker>
         <a-entity camera></a-entity>
         </a-scene>
