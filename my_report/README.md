@@ -30,6 +30,5 @@
 
 
 # Sources
-- Deliverable 1
-[Color Palettes](https://coolors.co/083d77-ebebd3-f4d35e-ee964b-f95738) | [Geometry](https://aframe.io/docs/1.3.0/components/geometry.html#cylinder#) | [Snow](https://www.npmjs.com/package/aframe-particle-system-component) | [Speech Command](https://www.npmjs.com/package/aframe-speech-command-component) | 
-- Deliverable 2 [Marker Creator](https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html) |
+- Deliverable 1 | [Color Palettes](https://coolors.co/083d77-ebebd3-f4d35e-ee964b-f95738) | [Geometry](https://aframe.io/docs/1.3.0/components/geometry.html#cylinder#) | [Snow](https://www.npmjs.com/package/aframe-particle-system-component) | [Speech Command](https://www.npmjs.com/package/aframe-speech-command-component) | 
+- Deliverable 2 | [Marker Creator](https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html) |
