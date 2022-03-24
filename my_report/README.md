@@ -17,7 +17,7 @@
 
 - (Snow)Έκανα προσθήκη τον **κώδικα** για το χιόνι από [εδώ](https://www.npmjs.com/package/aframe-particle-system-component) και μέσα στο a-entity έβαλα την εντολή `visible="false"` 
 - (Speech Command)
-  - Πρόσθεσα τον κώδικα το `a-entity id=annyang` από [εδώ](https://www.npmjs.com/package/aframe-speech-command-component)
+  - Πρόσθεσα στον κώδικα το `a-entity id=annyang` από [εδώ](https://www.npmjs.com/package/aframe-speech-command-component)
   - Πρόσθεσα τον κώδικα για τα `speech-command_show` και `speech-command_hide` από [εδώ](https://www.npmjs.com/package/aframe-speech-command-component) στο a-entity με τον κώδικα από το χίονι, ώστε να εμφανίζεται και να εξαφανίζεται το χιόνι όταν λεμέ **start** και **stop** αντίστοιχα
 
 # 2nd Deliverable
