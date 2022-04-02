@@ -56,7 +56,9 @@
         <a-marker type="barcode" value="39" id="hydrogenmarker">
           <a-image src="assets/card-H.png" rotation="-90 0 0" geometry="width: 2.3; height: 2.3"></a-image>
           <a-entity id="hydrogenatom" geometry="primitive: sphere; radius: 0.3" position="0 1 0"  material="src: #hydrogen; transparent: true; opacity: 0.95;"></a-entity>
-          <a-entity id="Hatom" geometry="primitive: sphere; radius: 0.1" position="0.7 1 0" attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite" material="color: #595959; opacity: 0.95;"></a-entity>
+          <a-entity id="Hatom" geometry="primitive: sphere; radius: 0.1" position="0.7 1 0"  material="color: #595959; opacity: 0.95;">
+            <a-animation attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+          </a-entity>
         </a-marker>
 
 
