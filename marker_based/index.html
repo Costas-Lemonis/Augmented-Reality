@@ -54,14 +54,14 @@
        </a-assets>
 
        <a-assets>
-           <a-asset-item id="Oatom" src="assets/hydrogenmodel.glb"></a-asset-item>
+           <a-asset-item id="Oatom" src="assets/hydrogenmodel.gltf"></a-asset-item>
        </a-assets>
 
         <a-marker type="barcode" value="8" id="oxygenmarker">
           <a-image src="assets/card-O.png" rotation="-90 0 0" geometry="width: 2.3; height: 2.3"></a-image>
-          <a-entity   position="0 0 0"
+          <a-entity   position="0 2 0"
                   rotation="0 0 0"
-                  scale="0.10 0.10 0.10"
+                  scale="2 2 2"
                   gltf-model="#Oatom"
                   animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;" >
           </a-entity>
@@ -69,7 +69,7 @@
 
         <a-marker type="barcode" value="39" id="hydrogenmarker">
             <a-image src="assets/card-H.png" rotation="-90 0 0" geometry="width: 2.3; height: 2.3"></a-image>
-            <a-entity   position="0 0 0"
+            <a-entity   position="0 2 0"
                     rotation="0 0 0"
                     scale="0.10 0.10 0.10"
                     gltf-model="#Hatom"
