@@ -35,12 +35,14 @@
         </a-marker>
 
 <!--Deliverable 2-->
-  <!--DPSD-->
+
+  <!--DPSD Pattern-->
         <a-marker preset="pattern" type="pattern" url="assets/pattern-dpsd19065.patt">
             <a-text text="value: Lemonis " position="-1.5 0 0" color= "#D73D3F"></a-text>
             <a-image src="assets/costas.png"></a-image>
             <a-text text="value: Costas " position="-1.5 0.5 0" color= "#F4D35E"></a-text>
         </a-marker>
+
   <!--Chemistry-->
         <a-assets>
 		      <img id="hydrogen" src="assets/hydrogenpattern.png" />
@@ -60,7 +62,8 @@
           <a-entity   position="0 0 0"
                   rotation="0 0 0"
                   scale="0.10 0.10 0.10"
-                  gltf-model="#Oatom" >
+                  gltf-model="#Oatom"
+                  animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;">
           </a-entity>
         </a-marker>
 
