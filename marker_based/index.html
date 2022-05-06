@@ -36,66 +36,19 @@
 
 <!--Deliverable 2-->
 
-<!--DPSD Pattern-->
+  <!--DPSD Pattern-->
         <a-marker preset="pattern" type="pattern" url="assets/pattern-dpsd19065.patt">
             <a-text text="value: Lemonis " position="-1.5 0 0" color= "#D73D3F"></a-text>
             <a-image src="assets/costas.png"></a-image>
             <a-text text="value: Costas " position="-1.5 0.5 0" color= "#F4D35E"></a-text>
         </a-marker>
 
-<!--Chemistry-->
-
-    <script>
-
-          let markerVisible = { "oxygenmarker": false, "hydrogenmarker": false };
-
-          AFRAME.registerComponent('registerevents', {
-              init: function ()
-              {
-                  let marker = this.el;
-
-                  marker.addEventListener("markerFound", function() {
-                      markerVisible[ marker.id ] = true;
-                      // console.log( markerVisible );
-                  });
-
-                  marker.addEventListener("markerLost", function() {
-                      markerVisible[ marker.id ] = false;
-                      // console.log( markerVisible );
-                  });
-              }
-          });
-
-          AFRAME.registerComponent("loop",
-          {
-              init: function()
-              {
-                  this.atom = document.querySelector("#thisAtom");
-              },
-
-              tick: function (time, deltaTime)
-              {
-                  // for convenience
-                  let mv = markerVisible, o = "oxygenmarker", h = "hydrogenmarker";
-
-                  if (mv[o] && mv[h] && mv[h] ){
-                      this.atom.setAttribute("gltf-model", "#Oatom");
-                      }
-                  else if ( mv[o] && mv[h] && mv[h]){
-                      this.atom.setAttribute("gltf-model", "#Hatom");
-                      }
-
-              }
-          });
-
-    </script>
-
+  <!--Chemistry-->
         <a-assets>
 		      <img id="hydrogen" src="assets/hydrogenpattern.png" />
 		      <img id="oxygen" src="assets/oxygenpattern.png" />
 	     </a-assets>
 
-<!--Atom Models-->
        <a-assets>
            <a-asset-item id="Hatom" src="assets/hydrogenmodel.gltf"></a-asset-item>
        </a-assets>
@@ -104,32 +57,34 @@
            <a-asset-item id="Oatom" src="assets/oxygenmodel.gltf"></a-asset-item>
        </a-assets>
 
-<!--Oxygen Marker-->
         <a-marker type="barcode" value="8" id="oxygenmarker">
           <a-image src="assets/card-O.png" rotation="-90 0 0" geometry="width: 2.3; height: 2.3"></a-image>
-          <a-entity id="thisAtom"
-                    transparent= "true"
-                    opacity= "0.95"
-                    position="0 1.5 0"
-                    rotation="0 0 0"
-                    scale="0.3 0.3 0.3"
-                    gltf-model="#Oatom"
-                    animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;" >
+          <a-entity   position="0 1.5 0"
+                  rotation="0 0 0"
+                  scale="0.3 0.3 0.3"
+                  gltf-model="#Oatom"
+                  animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;" >
           </a-entity>
         </a-marker>
 
-<!--Hydrogen Marker-->
         <a-marker type="barcode" value="39" id="hydrogenmarker">
             <a-image src="assets/card-H.png" rotation="-90 0 0" geometry="width: 2.3; height: 2.3"></a-image>
-            <a-entity transparent= "true"
-                      opacity= "0.95"
-                      position="0 1.5 0"
-                      rotation="0 0 0"
-                      scale="0.3 0.3 0.3"
-                      gltf-model="#Hatom"
-                      animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;" >
+            <a-entity   position="0 1.5 0"
+                    rotation="0 0 0"
+                    scale="0.3 0.3 0.3"
+                    gltf-model="#Hatom"
+                    animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;" >
             </a-entity>
         </a-marker>
+
+
+
+
+
+
+
+
+
 
 
 
