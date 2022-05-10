@@ -54,9 +54,11 @@
     markerDistance: function () {
         var oxygenmarkPos, hydrogenmarkPos ,markerDistance
 
-        var oxygenmark = document.querySelector("#oxygenmarker")
-        var hydrogenmark = document.querySelector("#hydrogenmarker")
-        var watermark = document.querySelector("#h2omarker")
+        this.oxygenmark = document.querySelector("#oxygenmarker")
+        this.hydrogenmark = document.querySelector("#hydrogenmarker")
+        this.watermark = document.querySelector("#h2omarker")
+
+
 
         oxygenmarkPos = new THREE.Vector3();
         oxygenmarkPos.object3D.getWorldPosition(oxygenmarkPos);
@@ -71,15 +73,15 @@
 
     if ( this.d < 2 )
     {
-            oxygenmark.setAttribute("visible", false)
-            hydrogenmark.setAttribute("visible", false)
-            watermark.setAttribute("visible", true)
+            this.oxygenmark.setAttribute("visible", false)
+            this.hydrogenmark.setAttribute("visible", false)
+            this.watermark.setAttribute("visible", true)
     }
     else
     {
-            oxygenmark.setAttribute("visible", true)
-            hydrogenmark.setAttribute("visible", true)
-            watermark.setAttribute("visible", false)
+            this.oxygenmark.setAttribute("visible", true)
+            this.hydrogenmark.setAttribute("visible", true)
+            this.watermark.setAttribute("visible", false)
     }
 
 
