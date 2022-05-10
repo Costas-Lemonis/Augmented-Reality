@@ -60,10 +60,10 @@
 
 
 
-        oxygenmarkPos = new THREE.Vector3();
+        this.oxygenmarkPos = new THREE.Vector3();
         oxygenmarkPos.object3D.getWorldPosition(oxygenmarkPos);
 
-        hydrogenmarkPos = new THREE.Vector3();
+        this.hydrogenmarkPos = new THREE.Vector3();
         hydrogenmarkPos.object3D.getWorldPosition(hydrogenmarkPos);
 
         //distance
@@ -71,7 +71,7 @@
         console.log("distance" + this.d)
     }
 
-    if ( marker-distance < 2 )
+    if ( this.markerDistance < 2 )
     {
             this.oxygenmark.setAttribute("visible", false)
             this.hydrogenmark.setAttribute("visible", false)
