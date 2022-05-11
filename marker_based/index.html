@@ -24,6 +24,9 @@
                  this.water = document.querySelector('#H2Oatom')
                  this.marker1 = document.querySelector('#oxygenmarker')
                  this.marker2 = document.querySelector('#hydrogenmarker')
+                 this.oxcard = document.querySelector('#oxygencard')
+                 this.hydrocard = document.querySelector('#hydrocard')
+                 this.h2ocard = document.querySelector('#H2Ocard')
              },
              tick: function()
              {
@@ -39,14 +42,14 @@
 
                  if (markerDistance<2)
                  {
-                    this.marker1.setAttribute("visible", false)
+
                      this.hydrogen.setAttribute("visible", false)
                      this.oxygen.setAttribute("visible", false)
                      this.water.setAttribute("visible", true)
                  }
                  else
                  {
-                   this.marker1.setAttribute("visible", true )
+
                      this.hydrogen.setAttribute("visible",true)
                      this.oxygen.setAttribute("visible",true)
                      this.water.setAttribute("visible", false)
