@@ -37,11 +37,11 @@
           hydrogenmarkPos.object3D.getWorldPosition(hydrogenmarkPos);
 
           //distance
-          markerDistance = oxygenmarkPos.distanceTo(hydrogenmarkPos);
+          distancee = oxygenmarkPos.distanceTo(hydrogenmarkPos);
 
       }
 
-      if (markerDistance<2)
+      if (distancee<1)
       {
         this.oxygenmark.setAttribute("visible", false)
         this.hydrogenmark.setAttribute("visible", false)
