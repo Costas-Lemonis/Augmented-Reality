@@ -31,17 +31,17 @@
           var oxygenmarkPos, hydrogenmarkPos ,distancee
 
           oxygenmarkPos = new THREE.Vector3();
-          this.oxygenmarkPos.object3D.getWorldPosition(oxygenmarkPos);
+          this.oxygenmark.object3D.getWorldPosition(oxygenmarkPos);
 
           hydrogenmarkPos = new THREE.Vector3();
-          this.hydrogenmarkPos.object3D.getWorldPosition(hydrogenmarkPos);
+          this.hydrogenmark.object3D.getWorldPosition(hydrogenmarkPos);
 
           //distance
           distancee = oxygenmarkPos.distanceTo(hydrogenmarkPos);
 
       }
 
-      if (distancee<1)
+      if (distancee<2)
       {
         this.oxygenmark.setAttribute("visible", false)
         this.hydrogenmark.setAttribute("visible", false)
