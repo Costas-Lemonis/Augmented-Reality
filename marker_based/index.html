@@ -14,52 +14,44 @@
 
 
     <body style="margin : 0px; overflow: hidden;">
+
       <script>
+             AFRAME.registerComponent("marker-distance", {
 
-      AFRAME.registerComponent("marker-distance", {
-      init: function ()
-      {
-          this.oxygenmark = document.querySelector("#oxygenmarker")
-          this.hydrogenmark = document.querySelector("#hydrogenmarker")
-          this.Oxygenatom = document.querySelector("#Oxyatom")
-          this.Hydrogenatom = document.querySelector("#Hydroatom")
-          this.Wateratom = document.querySelector("#H2Oatom")
-      },
+                 init: function () {
+                 this.hydrogen = document.querySelector('#Hydroatom')
+                 this.oxygen = document.querySelector('#Oxyatom')
+                 this.water = document.querySelector('#H2Oatom')
+                 this.marker1 = document.querySelector('#oxygenmarker')
+                 this.marker2 = document.querySelector('#hydrogenmarker')
+             },
+             tick: function()
+             {
+                 var marker1Pos, marker2Pos, markerDistance
 
-      tick: function () {
+                 marker1Pos = new THREE.Vector3();
+                 this.marker1.object3D.getWorldPosition(marker1Pos);
 
-          var oxygenmarkPos, hydrogenmarkPos ,markerDistance
+                 marker2Pos = new THREE.Vector3();
+                 this.marker2.object3D.getWorldPosition(marker2Pos);
 
-          oxygenmarkPos = new THREE.Vector3();
-          this.oxygenmark.object3D.getWorldPosition(oxygenmarkPos);
+                 markerDistance = marker1Pos.distanceTo(marker2Pos);
 
-          hydrogenmarkPos = new THREE.Vector3();
-          this.hydrogenmark.object3D.getWorldPosition(hydrogenmarkPos);
-
-          //distance
-          markerDistance = oxygenmarkPos.distanceTo(hydrogenmarkPos);
-
-      }
-
-      if (markerDistance<2)
-      {
-
-        this.Oxygenatom.setAttribute("visible", false)
-        this.Hydrogenatom.setAttribute("visible", false)
-        this.Wateratom..setAttribute("visible", true)
-      }
-      else
-      {
-
-        this.Oxygenatom.setAttribute("visible", true)
-        this.Hydrogenatom.setAttribute("visible", true)
-        this.Wateratom..setAttribute("visible", false)
-      }
-
-    },
-    });
-
-      </script>
+                 if (markerDistance<2)
+                 {
+                     this.hydrogen.setAttribute("visible", false)
+                     this.oxygen.setAttribute("visible", false)
+                     this.water.setAttribute("visible", true)
+                 }
+                 else
+                 {
+                     this.hydrogen.setAttribute("visible",true)
+                     this.oxygen.setAttribute("visible",true)
+                     this.water.setAttribute("visible", false)
+                 }
+             },
+         });
+         </script>
 
         <a-scene
     vr-mode-ui="enabled: false;"
