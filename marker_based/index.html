@@ -28,7 +28,7 @@
 
       tick: function () {
 
-          var oxygenmarkPos, hydrogenmarkPos ,distancee
+          var oxygenmarkPos, hydrogenmarkPos ,markerDistance
 
           oxygenmarkPos = new THREE.Vector3();
           this.oxygenmark.object3D.getWorldPosition(oxygenmarkPos);
@@ -37,22 +37,20 @@
           this.hydrogenmark.object3D.getWorldPosition(hydrogenmarkPos);
 
           //distance
-          distancee = oxygenmarkPos.distanceTo(hydrogenmarkPos);
+          markerDistance = oxygenmarkPos.distanceTo(hydrogenmarkPos);
 
       }
 
       if (distancee<2)
       {
-        this.oxygenmark.setAttribute("visible", false)
-        this.hydrogenmark.setAttribute("visible", false)
+
         this.Oxygenatom.setAttribute("visible", false)
         this.Hydrogenatom.setAttribute("visible", false)
         this.Wateratom..setAttribute("visible", true)
       }
       else
       {
-        this.oxygenmark.setAttribute("visible", true)
-        this.hydrogenmark.setAttribute("visible", true)
+        
         this.Oxygenatom.setAttribute("visible", true)
         this.Hydrogenatom.setAttribute("visible", true)
         this.Wateratom..setAttribute("visible", false)
