@@ -19,13 +19,14 @@
       AFRAME.registerComponent("marker-distance", {
       tick: function () {
           this.markerDistance()
+          this.oxygenmark = document.querySelector("#oxygenmarker")
+          this.hydrogenmark = document.querySelector("#hydrogenmarker")
+          this.watermark = document.querySelector("#water")
       },
-      markerDistance: function () {
+      tick: function () {
           var oxygenmarkPos, hydrogenmarkPos ,markerDistance
 
-          var oxygenmark = document.querySelector("#oxygenmarker")
-          var hydrogenmark = document.querySelector("#hydrogenmarker")
-          var watermark = document.querySelector("#water")
+
 
 
 
@@ -36,11 +37,11 @@
           hydrogenmarkPos.object3D.getWorldPosition(hydrogenmarkPos);
 
           //distance
-          this.d = oxygenmarkPos.distanceTo(hydrogenmarkPos);
-          console.log("distance" + this.d)
+          markerDistance = oxygenmarkPos.distanceTo(hydrogenmarkPos);
+          //console.log("distance" + this.d)//
       }
 
-      if (this.markerDistance< 2 )
+      if (markerDistance<2)
       {
               this.oxygenmark.setAttribute("visible", false)
               this.hydrogenmark.setAttribute("visible", false)
