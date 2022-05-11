@@ -103,6 +103,10 @@
            <a-asset-item id="Oatom" src="assets/oxygenmodel.gltf"></a-asset-item>
        </a-assets>
 
+       <a-assets>
+           <a-asset-item id="H2O" src="assets/oxygenmodel.gltf"></a-asset-item>
+       </a-assets>
+
 <!--Oxygen Marker-->
         <a-marker type="barcode" value="8" id="oxygenmarker">
           <a-image src="assets/card-O.png" rotation="-90 0 0" geometry="width: 2.3; height: 2.3"></a-image>
@@ -132,7 +136,7 @@
                       position="0 1.5 0"
                       rotation="0 0 0"
                       scale="0.3 0.3 0.3"
-                      gltf-model="#Hatom"
+                      gltf-model="#H2O"
                       animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
                       visible="false">
             </a-entity>
