@@ -17,7 +17,7 @@
       <script>
 
       AFRAME.registerComponent("marker-distance", {
-      tick: function () {
+      init: function () {
           this.markerDistance()
           this.oxygenmark = document.querySelector("#oxygenmarker")
           this.hydrogenmark = document.querySelector("#hydrogenmarker")
@@ -140,13 +140,13 @@
                       visible="false">
             </a-entity>
         </a-marker>
-
+         <a-entity marker-distance></a-entity>
 
 
 
 
          <a-entity camera></a-entity>
-         <a-entity marker-distance></a-entity>
+
         </a-scene>
     </body>
 </html>
