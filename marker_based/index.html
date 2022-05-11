@@ -42,15 +42,15 @@
 
       if (markerDistance< 2 )
       {
-            oxygenmark.setAttribute("visible", false)
-              hydrogenmark.setAttribute("visible", false)
-              watermark.setAttribute("visible", true)
+              this.oxygenmark.setAttribute("visible", false)
+              this.hydrogenmark.setAttribute("visible", false)
+              this.watermark.setAttribute("visible", true)
       }
       else
       {
-              oxygenmark.setAttribute("visible", true)
-              hydrogenmark.setAttribute("visible", true)
-              watermark.setAttribute("visible", false)
+              this.oxygenmark.setAttribute("visible", true)
+              this.hydrogenmark.setAttribute("visible", true)
+              this.watermark.setAttribute("visible", false)
       }
 
 
@@ -129,19 +129,20 @@
                       animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
                        visible="true">
             </a-entity>
+            
+            <a-entity id="water"
+                      position="0 1.5 0"
+                      rotation="0 0 0"
+                      scale="0.3 0.3 0.3"
+                      gltf-model="#Hatom"
+                      animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
+                      visible="false">
+            </a-entity>
         </a-marker>
 
-<!--Water Marker-->
-    <a-entity id="water">
-        <a-entity
-                  position="0 1.5 0"
-                  rotation="0 0 0"
-                  scale="0.3 0.3 0.3"
-                  gltf-model="#Hatom"
-                  animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
-                  visible="false">
-        </a-entity>
-      </a-entity>
+
+
+
 
          <a-entity camera></a-entity>
          <a-entity marker-distance></a-entity>
