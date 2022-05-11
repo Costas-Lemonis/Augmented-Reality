@@ -136,14 +136,16 @@
         </a-marker>
 
 <!--Water Marker-->
-        <a-entity id="water"
+    <a-entity id="water">
+        <a-entity
                   position="0 1.5 0"
                   rotation="0 0 0"
                   scale="0.3 0.3 0.3"
                   gltf-model="#H2Oatom"
                   animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
-                   >
+                  visible="false">
         </a-entity>
+      </a-entity>
 
          <a-entity camera></a-entity>
          <a-entity marker-distance></a-entity>
