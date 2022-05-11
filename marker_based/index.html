@@ -103,12 +103,14 @@
            <a-asset-item id="Oatom" src="assets/oxygenmodel.gltf"></a-asset-item>
        </a-assets>
 
+       <a-assets>
+           <a-asset-item id="H2Oatom" src="assets/water.gltf"></a-asset-item>
+       </a-assets>
+
 <!--Oxygen Marker-->
         <a-marker type="barcode" value="8" id="oxygenmarker">
           <a-image src="assets/card-O.png" rotation="-90 0 0" geometry="width: 2.3; height: 2.3"></a-image>
           <a-entity id="oxygenmarker"
-                    transparent= "true"
-                    opacity= "0.95"
                     position="0 1.5 0"
                     rotation="0 0 0"
                     scale="0.3 0.3 0.3"
@@ -122,8 +124,6 @@
         <a-marker type="barcode" value="39" id="hydrogenmarker">
             <a-image src="assets/card-H.png" rotation="-90 0 0" geometry="width: 2.3; height: 2.3"></a-image>
             <a-entity
-                      transparent= "true"
-                      opacity= "0.75"
                       position="0 1.5 0"
                       rotation="0 0 0"
                       scale="0.3 0.3 0.3"
@@ -135,8 +135,6 @@
 
 <!--Water Marker-->
         <a-entity id="water"
-                  transparent= "true"
-                  opacity= "0.75"
                   position="0 1.5 0"
                   rotation="0 0 0"
                   scale="0.3 0.3 0.3"
