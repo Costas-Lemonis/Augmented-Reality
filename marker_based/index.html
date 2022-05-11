@@ -31,10 +31,10 @@
           var oxygenmarkPos, hydrogenmarkPos ,distancee
 
           oxygenmarkPos = new THREE.Vector3();
-          oxygenmarkPos.object3D.getWorldPosition(oxygenmarkPos);
+          this.oxygenmarkPos.object3D.getWorldPosition(oxygenmarkPos);
 
           hydrogenmarkPos = new THREE.Vector3();
-          hydrogenmarkPos.object3D.getWorldPosition(hydrogenmarkPos);
+          this.hydrogenmarkPos.object3D.getWorldPosition(hydrogenmarkPos);
 
           //distance
           distancee = oxygenmarkPos.distanceTo(hydrogenmarkPos);
@@ -58,7 +58,7 @@
         this.Wateratom..setAttribute("visible", false)
       }
 
-
+    },
     });
 
       </script>
