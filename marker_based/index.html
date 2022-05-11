@@ -14,6 +14,50 @@
 
 
     <body style="margin : 0px; overflow: hidden;">
+
+      <script>
+
+      AFRAME.registerComponent("marker-distance", {
+      tick: function () {
+          this.markerDistance()
+      },
+      markerDistance: function () {
+          var oxygenmarkPos, hydrogenmarkPos ,markerDistance
+
+          var oxygenmark = document.querySelector("#oxygenmarker")
+          var hydrogenmark = document.querySelector("#hydrogenmarker")
+          var watermark = document.querySelector("#water")
+
+
+
+          oxygenmarkPos = new THREE.Vector3();
+          oxygenmarkPos.object3D.getWorldPosition(oxygenmarkPos);
+
+          hydrogenmarkPos = new THREE.Vector3();
+          hydrogenmarkPos.object3D.getWorldPosition(hydrogenmarkPos);
+
+          //distance
+          this.d = oxygenmarkPos.distanceTo(hydrogenmarkPos);
+          console.log("distance" + this.d)
+      }
+
+      if (markerDistance< 2 )
+      {
+              this.oxygenmark.setAttribute("visible", false)
+              this.hydrogenmark.setAttribute("visible", false)
+              this.watermark.setAttribute("visible", true)
+      }
+      else
+      {
+              this.oxygenmark.setAttribute("visible", true)
+              this.hydrogenmark.setAttribute("visible", true)
+              this.watermark.setAttribute("visible", false)
+      }
+
+
+  });
+
+      </script>
         <a-scene
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
@@ -45,49 +89,7 @@
 
 <!--Chemistry-->
 
-    <script>
 
-    AFRAME.registerComponent("marker-distance", {
-    tick: function () {
-        this.markerDistance()
-    },
-    markerDistance: function () {
-        var oxygenmarkPos, hydrogenmarkPos ,markerDistance
-
-        var oxygenmark = document.querySelector("#oxygenmarker")
-        var hydrogenmark = document.querySelector("#hydrogenmarker")
-        var watermark = document.querySelector("#water")
-
-
-
-        oxygenmarkPos = new THREE.Vector3();
-        oxygenmarkPos.object3D.getWorldPosition(oxygenmarkPos);
-
-        hydrogenmarkPos = new THREE.Vector3();
-        hydrogenmarkPos.object3D.getWorldPosition(hydrogenmarkPos);
-
-        //distance
-        this.d = oxygenmarkPos.distanceTo(hydrogenmarkPos);
-        console.log("distance" + this.d)
-    }
-
-    if ( markerDistance < 2 )
-    {
-            this.oxygenmark.setAttribute("visible", false)
-            this.hydrogenmark.setAttribute("visible", false)
-            this.watermark.setAttribute("visible", true)
-    }
-    else
-    {
-            this.oxygenmark.setAttribute("visible", true)
-            this.hydrogenmark.setAttribute("visible", true)
-            this.watermark.setAttribute("visible", false)
-    }
-
-
-});
-
-    </script>
 
         <a-assets>
 		      <img id="hydrogen" src="assets/hydrogenpattern.png" />
