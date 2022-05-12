@@ -25,13 +25,19 @@
   - Μετά πρόσθεσα ένα `a-text` με τον **κώδικα** από [εδώ](https://levelup.gitconnected.com/simple-augmented-reality-ar-integration-with-a-frame-f625e9dc66b8) για να εμφανίζει το όνομα και το επίθετο και πείραξα το color και το position τους ![image](https://user-images.githubusercontent.com/100446886/168032754-19bbd3fe-7b13-4750-8e40-2b64cf18ca03.png)
   - Μετά πρόσθεσα ένα `a-image` με τον **κώδικα** από [εδώ](https://levelup.gitconnected.com/simple-augmented-reality-ar-integration-with-a-frame-f625e9dc66b8) για να εμφανίζει μια φωτογραφία της επιλογής μου και πείραξα το position ![image](https://user-images.githubusercontent.com/100446886/168034010-0028a7b6-0962-4d90-8389-cf3c874b760d.png)
 - (Chemistry Project)Αρχικά οι markers έχουν `type=barcode` οπότε για να αναγνωρίζονται τα markers έπρεπε να προσθέσω τον binary code τους μέσα στο κεντρικό `a-scene` που βρήκα απο [εδώ](https://aframe.io/blog/arjs/) ![image](https://user-images.githubusercontent.com/100446886/168039775-f7419996-ef93-4b45-96de-d49c0ce3f363.png) οπότε ο κώδικα του html έγινε έτσι ![image](https://user-images.githubusercontent.com/100446886/168040674-dc1e8d65-d649-455e-809d-b985f233fe7e.png)
-  - Μετά έκανα ένα `a-assets` για να ορίσω τα μοντέλο για το Hydrogen το οποίο έκανα στο **Blender** [Video Texture](https://www.youtube.com/watch?v=r5YNJghc81U) ![image](https://user-images.githubusercontent.com/100446886/168044763-25343cc1-88c0-4fd1-9f50-7554506e2c5b.png)
-  - Μετά έκανα ένα `a-assets` για να ορίσω τα μοντέλο για το Oxygen το οποίο έκανα στο **Blender** [Video Texture](https://www.youtube.com/watch?v=r5YNJghc81U) ![image](https://user-images.githubusercontent.com/100446886/168046044-c8274f39-8baa-43d1-8cc4-60338e2ed8e1.png)
-  - Μετά έκανα ένα `a-assets` για να ορίσω τα μοντέλο για το H2O το οποίο έκανα στο **Blender** [Video Texture](https://www.youtube.com/watch?v=r5YNJghc81U) ![image](https://user-images.githubusercontent.com/100446886/168046173-950ac754-ac01-42e4-968c-d27f1c2a3fdc.png)
+  - Μετά έκανα ένα `a-assets` για να ορίσω τα μοντέλο για το Hydrogen το οποίο έκανα στο **Blender** και το έκανα export σε .gltf [Video Texture](https://www.youtube.com/watch?v=r5YNJghc81U) ![image](https://user-images.githubusercontent.com/100446886/168044763-25343cc1-88c0-4fd1-9f50-7554506e2c5b.png)
+  - Μετά έκανα ένα `a-assets` για να ορίσω τα μοντέλο για το Oxygen το οποίο έκανα στο **Blender** και το έκανα export σε .gltf [Video Texture](https://www.youtube.com/watch?v=r5YNJghc81U) ![image](https://user-images.githubusercontent.com/100446886/168046044-c8274f39-8baa-43d1-8cc4-60338e2ed8e1.png)
+  - Μετά έκανα ένα `a-assets` για να ορίσω τα μοντέλο για το H2O το οποίο έκανα στο **Blender** και το έκανα export σε .gltf [Video Texture](https://www.youtube.com/watch?v=r5YNJghc81U) ![image](https://user-images.githubusercontent.com/100446886/168046173-950ac754-ac01-42e4-968c-d27f1c2a3fdc.png)
 
-  - (Hydrogen Marker)Μετά έκανα ένα καινούργιο `a-marker` για τον marker του Hydrogen με το κώδικα από [εδώ](https://aframe.io/blog/arjs/) και άλλαξα το **value** ![image](https://user-images.githubusercontent.com/100446886/168041171-3b7de334-29b7-4ea8-ac09-2c38b7cd86ab.png)
+ - (Hydrogen Marker)Μετά έκανα ένα καινούργιο `a-marker` για τον marker του Hydrogen με το κώδικα από [εδώ](https://aframe.io/blog/arjs/) και άλλαξα το **value**
    - Μετά πρόσθεσα ενα `a-image` μέσα στο marker έτσι ώστε να εμφανίζει την κάρτα του Hydrogen σαν φωτογραφία
-   - Μετά πρόσθεσα ενα `a-entity` μέσα στο marker έτσι ώστε να 
+   - Μετά πρόσθεσα ενα `a-entity` μέσα στο marker έτσι ώστε να να καλέσω το `a-assets` του Hydrogen και μετά πείραξα το position και το scale ώστε να φαίνεται καλύτερα
+   - Μετά μέσα στον ίδιο Marker πρόσθεσα ενα `a-image` ώστε να να καλέσω το `a-assets` του H2O και έβαλα ενα `visible=false` ώστε να μην φαίνεται μαζί με την model του Hydrogen
+   - Μετά μέσα στον ίδιο Marker πρόσθεσα ενα `a-entity` ώστε να εμφανίζει την κάρτα του H2O σαν φωτογραφία και έβαλα ενα `visible=false` ώστε να μην φαίνεται μαζί με την φωτογραφία του Hydrogen
+
+- (Oxygen Marker)Μετά έκανα ένα καινούργιο `a-marker` για τον marker του Oxygen με το κώδικα από [εδώ](https://aframe.io/blog/arjs/) και άλλαξα το **value**
+   - Μετά πρόσθεσα ενα `a-image` μέσα στο marker έτσι ώστε να εμφανίζει την κάρτα του Oxygen σαν φωτογραφία
+   - Μετά πρόσθεσα ενα `a-entity` μέσα στο marker έτσι ώστε να να καλέσω το `a-assets` του Oxygen και μετά πείραξα το position και το scale ώστε να φαίνεται καλύτερα
 
 # 3rd Deliverable 
 
