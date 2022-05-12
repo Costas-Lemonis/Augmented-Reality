@@ -14,16 +14,16 @@
 
 
     <body style="margin : 0px; overflow: hidden;">
-
+<!--Marker-Distance Script -->
       <script>
              AFRAME.registerComponent("marker-distance", {
 
                  init: function () {
-                 this.marker1 = document.querySelector('#oxygenmarker')
-                 this.marker2 = document.querySelector('#hydrogenmarker')
                  this.hydrogen = document.querySelector('#Hydroatom')
                  this.oxygen = document.querySelector('#Oxyatom')
                  this.water = document.querySelector('#H2Oatom')
+                 this.marker1 = document.querySelector('#oxygenmarker')
+                 this.marker2 = document.querySelector('#hydrogenmarker')
                  this.oxcard = document.querySelector('#oxygencard')
                  this.hydrocard = document.querySelector('#hydrocard')
                  this.h2ocard = document.querySelector('#H2Ocard')
@@ -45,9 +45,9 @@
 
                      this.hydrogen.setAttribute("visible", false)
                      this.oxygen.setAttribute("visible", false)
-                     this.water.setAttribute("visible", true)   
-                     this.hydrocard.setAttribute("visible", false)
+                     this.water.setAttribute("visible", true)
                      this.oxcard.setAttribute("visible", false)
+                     this.hydrocard.setAttribute("visible", false)
                      this.h2ocard.setAttribute("visible", true)
                  }
                  else
@@ -56,8 +56,8 @@
                      this.hydrogen.setAttribute("visible",true)
                      this.oxygen.setAttribute("visible",true)
                      this.water.setAttribute("visible", false)
-                     this.hydrocard.setAttribute("visible", true)
                      this.oxcard.setAttribute("visible", true)
+                     this.hydrocard.setAttribute("visible", true)
                      this.h2ocard.setAttribute("visible", false)
                  }
              },
@@ -95,15 +95,18 @@
 
 <!--Chemistry-->
 
-<!--Atom Models-->
+<!--Atom Models gltf-->
+<!-- Hydrogen Model-->
        <a-assets>
            <a-asset-item id="Hatom" src="assets/hydrogenmodel.gltf"></a-asset-item>
        </a-assets>
 
+<!-- Oxygen Model-->
        <a-assets>
            <a-asset-item id="Oatom" src="assets/oxygenmodel.gltf"></a-asset-item>
        </a-assets>
 
+<!-- H2O Model-->
        <a-assets>
            <a-asset-item id="H2O" src="assets/water.gltf"></a-asset-item>
        </a-assets>
