@@ -39,6 +39,8 @@
    - Μετά πρόσθεσα ενα `a-image` μέσα στο marker έτσι ώστε να εμφανίζει την κάρτα του Oxygen σαν φωτογραφία
    - Μετά πρόσθεσα ενα `a-entity` μέσα στο marker έτσι ώστε να να καλέσω το `a-assets` του Oxygen και μετά πείραξα το position και το scale ώστε να φαίνεται καλύτερα και για το animation έβαλα την εντολή animation_rotate που βρήκα απο [εδώ](https://stemkoski.github.io/AR.js-examples/index.html)
 
+- (Marker-Distance)Αρχικά έβαλα τον κώδικα για το `Script` από [εδώ](https://stackoverflow.com/questions/61239107/how-to-get-marker-position-x-y-ar-js) και τον έφτιαξα έτσι ώστε να ταιρίαζει με τους markers ![image](https://user-images.githubusercontent.com/100446886/168085409-b152e9d7-db3f-4461-a633-b079635c9a56.png) Μετά έβαλα μια `if-else` έτσι ώστε αν ο **Marker-Distance < 2** τότε να εμφανίζει τον **Marker H2O** και να κρύβει τους **Markers** για το **Hydrogen**,**Oxygen** ενώ αν **Marker-Distance > 2** τότε να εμφανίζει τους **Markers** για το **Hydrogen**,**Oxygen** και να κρύβει τον **Marker H2O**
+
 # 3rd Deliverable 
 
 
