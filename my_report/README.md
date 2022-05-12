@@ -29,15 +29,15 @@
   - Μετά έκανα ένα `a-assets` για να ορίσω τα μοντέλο για το Oxygen το οποίο έκανα στο **Blender** και το έκανα export σε .gltf [Video Texture](https://www.youtube.com/watch?v=r5YNJghc81U) ![image](https://user-images.githubusercontent.com/100446886/168046044-c8274f39-8baa-43d1-8cc4-60338e2ed8e1.png)
   - Μετά έκανα ένα `a-assets` για να ορίσω τα μοντέλο για το H2O το οποίο έκανα στο **Blender** και το έκανα export σε .gltf [Video Texture](https://www.youtube.com/watch?v=r5YNJghc81U) ![image](https://user-images.githubusercontent.com/100446886/168046173-950ac754-ac01-42e4-968c-d27f1c2a3fdc.png)
 
- - (Hydrogen Marker)Μετά έκανα ένα καινούργιο `a-marker` για τον marker του Hydrogen με το κώδικα από [εδώ](https://aframe.io/blog/arjs/) και άλλαξα το **value**
+ - (Hydrogen Marker-H2O Marker)Μετά έκανα ένα καινούργιο `a-marker` για τον marker του Hydrogen με το κώδικα από [εδώ](https://aframe.io/blog/arjs/) και άλλαξα το **value**
    - Μετά πρόσθεσα ενα `a-image` μέσα στο marker έτσι ώστε να εμφανίζει την κάρτα του Hydrogen σαν φωτογραφία
    - Μετά πρόσθεσα ενα `a-entity` μέσα στο marker έτσι ώστε να να καλέσω το `a-assets` του Hydrogen και μετά πείραξα το position και το scale ώστε να φαίνεται καλύτερα
    - Μετά μέσα στον ίδιο Marker πρόσθεσα ενα `a-image` ώστε να να καλέσω το `a-assets` του H2O και έβαλα ενα `visible=false` ώστε να μην φαίνεται μαζί με την model του Hydrogen
-   - Μετά μέσα στον ίδιο Marker πρόσθεσα ενα `a-entity` ώστε να εμφανίζει την κάρτα του H2O σαν φωτογραφία και έβαλα ενα `visible=false` ώστε να μην φαίνεται μαζί με την φωτογραφία του Hydrogen
+   - Μετά μέσα στον ίδιο Marker πρόσθεσα ενα `a-entity` ώστε να εμφανίζει το μοντέλο του H2O και έβαλα ενα `visible=false` ώστε να μην φαίνεται μαζί με το Hydrogen
 
 - (Oxygen Marker)Μετά έκανα ένα καινούργιο `a-marker` για τον marker του Oxygen με το κώδικα από [εδώ](https://aframe.io/blog/arjs/) και άλλαξα το **value**
    - Μετά πρόσθεσα ενα `a-image` μέσα στο marker έτσι ώστε να εμφανίζει την κάρτα του Oxygen σαν φωτογραφία
-   - Μετά πρόσθεσα ενα `a-entity` μέσα στο marker έτσι ώστε να να καλέσω το `a-assets` του Oxygen και μετά πείραξα το position και το scale ώστε να φαίνεται καλύτερα
+   - Μετά πρόσθεσα ενα `a-entity` μέσα στο marker έτσι ώστε να να καλέσω το `a-assets` του Oxygen και μετά πείραξα το position και το scale ώστε να φαίνεται καλύτερα και για το animation έβαλα την εντολή animation_rotate που βρήκα απο [εδώ](https://stemkoski.github.io/AR.js-examples/index.html)
 
 # 3rd Deliverable 
 
@@ -47,4 +47,4 @@
 
 # Sources
 - Deliverable 1 | [Color Palettes](https://coolors.co/083d77-ebebd3-f4d35e-ee964b-f95738) | [Geometry](https://aframe.io/docs/1.3.0/components/geometry.html#cylinder#) | [Snow](https://www.npmjs.com/package/aframe-particle-system-component) | [Speech Command](https://www.npmjs.com/package/aframe-speech-command-component) | 
-- Deliverable 2 | [Marker Creator](https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html) | [3D Model Code](https://stemkoski.github.io/AR.js-examples/index.html) |
+- Deliverable 2 | [Marker Creator](https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html) | [3D Model Code](https://stemkoski.github.io/AR.js-examples/index.html) | [Animation](https://stemkoski.github.io/AR.js-examples/index.html) | 
