@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,19 +17,17 @@
 		embedded
 		arjs='sourceType: webcam; debugUIEnabled: false;'>
 
-    <a-assets>
-        <a-asset-item
-            id="animated-asset"
-            src="assets/asset.gltf"
-        ></a-asset-item>
-    </a-assets>
+
+            <a-assets>
+               <a-asset-item id="H2O" src="assets/La_Sagrada_Família.gltf"
+                gps-entity-place="latitude: 41.546322; longitude: 2.44775;"
+                scale="20 20 20"
+               ></a-asset-item>
+            </a-assets>
 
         <a-camera
-        look-at="[gps-camera]"
-        animation-mixer="loop: repeat"
-        gltf-model="#animated-asset"
-        scale="0.5 0.5 0.5"
-        gps-entity-place="latitude: 41.546322; longitude: 2.44775; minDistance: 1; maxDistance: 700;"
+            rotation-reader
+            gps-camera="latitude: 41.546322; longitude: 2.44775; minDistance: 1; maxDistance: 700;"
         >
 		</a-camera>
 	</a-scene>
