@@ -8,14 +8,20 @@
     <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>-->
     <script src='build/aframe-ar-nft.js'></script>
     <script>
-        AFRAME.registerComponent('clicker', {
-            init: function() {
-                this.el.addEventListener('click', e => {
-                    alert('Box clicked!');
-                });
+
+        AFRAME.registerComponent("text-show", {
+            init: function () {
+                let toggle = false
+                this.el.addEventListener("click", (e) => {
+                    let entity = document.querySelectorAll(".clickable")
+                    entity.forEach(function (el) {
+                        el.setAttribute("visible", toggle)
+                    })
+                    toggle = !toggle
+                })
             }
-        });
-        </script>
+        })
+    </script>
 </head>
 
 
@@ -32,20 +38,20 @@
             </a-assets>
 
 <!-- La Sagrada Família Model and Text-->
-            <a-entity position="0 0 -180"
+            <a-entity  class="click"  position="0 0 -180"
                       scale="1 1 1"
                       gltf-model="#sagrada"
-                      gps-entity-place="latitude: 41.546322; longitude: 2.44775;">
+                      gps-entity-place="latitude: 41.546322; longitude: 2.44775;" text-show>
             </a-entity>
 
 <!-- La Sagrada Família Text-->
-          <a-text text="value: Sagrada Família Basílica i Temple Expiatori
+          <a-text class="clickable" text="value: Sagrada Família Basílica i Temple Expiatori
            de la Sagrada Família
            Templo Expiatorio de la Sagrada Familia"
            position="0 0 -90"
            color= "#F4D35E"
            scale="7 7 7"
-           clicker>
+           visible="false">
          </a-text>
 
         <a-camera
