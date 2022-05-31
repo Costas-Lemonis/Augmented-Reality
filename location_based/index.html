@@ -8,32 +8,30 @@
     <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>-->
     <script src='build/aframe-ar-nft.js'></script>
     <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
+    <script>
 
+    AFRAME.registerComponent("markerhandler", {
+
+      init: function() {
+      this.sagradaMarker = document.querySelector("#sagrada-marker");
+      this.aEntity = document.querySelector("#text_info");
+
+      // every click, we make our model grow in size :)
+      sagradaMarker.addEventListener("click", function(ev, target){
+          const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
+          if (aEntity && intersectedElement === aEntity) {
+              const visible = aEntity.getAttribute(visible);
+            //  Object.keys(scale).forEach((key) => scale[key] = scale[key] + 1);
+              this.aEntity.setAttribute("visible", true);
+          }
+      });
+      }});
+    </script>
 </head>
 
 
 <body style='margin: 0; overflow: hidden;'>
 
-  <script>
-
-  AFRAME.registerComponent("markerhandler", {
-
-    init: function() {
-    this.sagradaMarker = document.querySelector("#sagrada-marker");
-    this.aEntity = document.querySelector("#text_info");
-
-    // every click, we make our model grow in size :)
-    sagradaMarker.addEventListener("click", function(ev, target){
-        const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
-        if (aEntity && intersectedElement === aEntity) {
-            const visible = aEntity.getAttribute(visible);
-          //  Object.keys(scale).forEach((key) => scale[key] = scale[key] + 1);
-            this.aEntity.setAttribute("visible", true);
-        }
-    });
-    }});
-  </script>
-  
     <a-scene
         vr-mode-ui="enabled: false"
 		embedded
@@ -52,18 +50,18 @@
                       gltf-model="#sagrada"
                       gps-entity-place="latitude: 41.546322; longitude: 2.44775;" text-show>
             </a-entity>
-
+            <a-text id="text_info" text="value: Sagrada Família Basílica i Temple Expiatori
+             de la Sagrada Família
+             Templo Expiatorio de la Sagrada Familia"
+             position="0 0 -90"
+             color= "#F4D35E"
+             scale="7 7 7"
+             visible="false">
+           </a-text>
           </a-entity>
 
 <!-- La Sagrada Família Text-->
-          <a-text id="text_info" text="value: Sagrada Família Basílica i Temple Expiatori
-           de la Sagrada Família
-           Templo Expiatorio de la Sagrada Familia"
-           position="0 0 -90"
-           color= "#F4D35E"
-           scale="7 7 7"
-           visible="false">
-         </a-text>
+
 
         <a-camera
             rotation-reader
