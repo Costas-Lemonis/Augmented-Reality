@@ -9,24 +9,15 @@
     <script src='build/aframe-ar-nft.js'></script>
     <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
     <script>
-
-    AFRAME.registerComponent("markerhandler", {
-
-      init: function() {
-      this.sagradaMarker = document.querySelector("#sagrada-marker");
-      this.aEntity = document.querySelector("#text_info");
-
-      // every click, we make our model grow in size :)
-      sagradaMarker.addEventListener("click", function(ev, target){
-          const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
-          if (aEntity && intersectedElement === aEntity) {
-              const visible = aEntity.getAttribute(visible);
-            //  Object.keys(scale).forEach((key) => scale[key] = scale[key] + 1);
-              this.aEntity.setAttribute("visible", true);
-          }
-      });
-      }});
-    </script>
+AFRAME.registerComponent('for_a_marker', {
+    init: function () {
+        var text = document.querySelector('#text_info');
+        text.addEventListener("click", function (evt) { //or you could do "mouseenter" [event](https://aframe.io/docs/0.9.0/components/cursor.html#events)
+            alert("do your stuff");
+        });
+    }
+});
+</script>
 </head>
 
 
@@ -43,14 +34,14 @@
             </a-assets>
 
 <!-- La Sagrada Família Model and Text-->
-          <a-entity markerhandler emitevents="true" cursor="rayOrigin: mouse" id="sagrada-marker">
 
-            <a-entity id="sagrada_model" position="0 0 -180"
+            <a-entity cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
+            <a-entity id="sagrada_model" position="0 0 -180"  emitevents="true" for_a_marker
                       scale="1 1 1"
                       gltf-model="#sagrada"
                       gps-entity-place="latitude: 41.546322; longitude: 2.44775;" text-show>
             </a-entity>
-            <a-text id="text_info" text="value: Sagrada Família Basílica i Temple Expiatori
+            <a-text id="text_info" class="intersectable" text="value: Sagrada Família Basílica i Temple Expiatori
              de la Sagrada Família
              Templo Expiatorio de la Sagrada Familia"
              position="0 0 -90"
@@ -58,7 +49,6 @@
              scale="7 7 7"
              visible="false">
            </a-text>
-          </a-entity>
 
 <!-- La Sagrada Família Text-->
 
