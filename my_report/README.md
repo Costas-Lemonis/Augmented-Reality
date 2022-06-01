@@ -39,10 +39,21 @@
    - Μετά πρόσθεσα ενα `a-image` μέσα στο marker έτσι ώστε να εμφανίζει την κάρτα του Oxygen σαν φωτογραφία
    - Μετά πρόσθεσα ενα `a-entity` μέσα στο marker έτσι ώστε να να καλέσω το `a-assets` του Oxygen και μετά πείραξα το position και το scale ώστε να φαίνεται καλύτερα και για το animation έβαλα την εντολή animation_rotate που βρήκα απο [εδώ](https://stemkoski.github.io/AR.js-examples/index.html)
 
-- (Marker-Distance)Αρχικά έβαλα τον κώδικα για το `Script` από [εδώ](https://stackoverflow.com/questions/61239107/how-to-get-marker-position-x-y-ar-js)  και τον έφτιαξα έτσι ώστε να ταιρίαζει με τους markers ![image](https://user-images.githubusercontent.com/100446886/168085409-b152e9d7-db3f-4461-a633-b079635c9a56.png) Μετά έβαλα μια `if-else` έτσι ώστε αν ο **Marker-Distance < 2** τότε να εμφανίζει τον **Marker H2O** και να κρύβει τους **Markers** για το **Hydrogen**,**Oxygen** ενώ αν **Marker-Distance > 2** τότε να εμφανίζει τους **Markers** για το **Hydrogen**,**Oxygen** και να κρύβει τον **Marker H2O**
+- (Marker-Distance)Αρχικά έβαλα τον κώδικα για το `Script` από [εδώ](https://stackoverflow.com/questions/61239107/how-to-get-marker-position-x-y-ar-js)![image](https://user-images.githubusercontent.com/100446886/171505145-5a0dc592-8c36-4348-b539-a8cb6f3d3e29.png)
+  και τον έφτιαξα έτσι ώστε να ταιρίαζει με τους markers ![image](https://user-images.githubusercontent.com/100446886/168085409-b152e9d7-db3f-4461-a633-b079635c9a56.png) Μετά έβαλα μια `if-else` έτσι ώστε αν ο **Marker-Distance < 2** τότε να εμφανίζει τον **Marker H2O** και να κρύβει τους **Markers** για το **Hydrogen**,**Oxygen** ενώ αν **Marker-Distance > 2** τότε να εμφανίζει τους **Markers** για το **Hydrogen**,**Oxygen** και να κρύβει τον **Marker H2O**
 
 # 3rd Deliverable 
-- 
+- (Place Of Interest)Αρχικά έκανα ένα `a-assets` για να ορίσω τα μοντέλο για την La Sagrada Família  το οποίο βρήκα από[εδώ](https://sketchfab.com/3d-models/sagrada-familia-front-facade-385d0c915b0b42e6829acae811f06fbe) ![image](https://user-images.githubusercontent.com/100446886/171505300-68ad7dae-b092-4428-9001-a47b42f3e95f.png)
+ Μετά πρόσθεσα `position` και `scale` ώστε να φτιάξω το μέγεθος και την θέση του μοντέλου. Μετά έκανα ένα `a-text` για να προσθέσω το κείμενο για την περιγραφή του μοντέλου και πρόσθεσα `position` και `scale` ώστε να φτιάξω το μέγεθος και την θέση του κειμένου.
+ Για το click event μετά από αρκετά παραδείγματα έκανα ένα mix από αυτούς τους κώδικες [κ.1](https://blog.davidvassallo.me/2019/09/26/augmented-reality-using-aframe-tips-tricks/)![image](https://user-images.githubusercontent.com/100446886/171506821-63327140-391a-4334-b1a4-4c9561dc6838.png)
+ και [κ.2](https://glitch.com/~salty-partner-1)![image](https://user-images.githubusercontent.com/100446886/171507271-86dc14b3-2eb0-4309-baea-b0f5d9834c91.png)
+ έπειτα πρόσθεσα ένα `class="click"` μέσα στο `a-entity` του μοντέλου και ένα `class="clickable"` μέσα στο `a-text` ώστε όταν κάνουμε click πάνω του να εμφανίζει το **text** Τέλος άλλαξα τα **Latitude** και **Longitude** με αυτά του Place Of Interest τα οποία βρήκα [εδώ](https://www.latlong.net/)
+ 
+ - (Syros Place Of Interest)
+Αρχικά άλλαξα τα **Latitude** και **Longitude** με αυτά του Syros Place Of Interest τα οποία βρήκα [εδώ](https://www.latlong.net/)
+Μετά πρόσθεσα ένα `a-image` ώστε να εμφανίζει μια εικόνα από το μέρος που επέλεξα
+Μετά πρόσθεσα ένα `a-text` ώστε να εμφανίζει ένα κείμενο από το μέρος που επέλεξα
+
 
 # Conclusions
 
