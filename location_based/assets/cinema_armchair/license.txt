@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cinema Armchair
+* source:	https://sketchfab.com/3d-models/cinema-armchair-4c4a9dff9d604ec69f43e565951c1cd6
+* author:	Georgiy_Liahov (https://sketchfab.com/georgiyaliahov)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cinema Armchair" (https://sketchfab.com/3d-models/cinema-armchair-4c4a9dff9d604ec69f43e565951c1cd6) by Georgiy_Liahov (https://sketchfab.com/georgiyaliahov) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
