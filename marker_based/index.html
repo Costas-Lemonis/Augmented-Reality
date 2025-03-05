@@ -74,9 +74,14 @@
 <!--Deliverable 1-->
 
         <a-marker preset="hiro">
-            <a-assets>
-                <a-asset-item id="Hatom" src="assets/hydrogenmodel.gltf"></a-asset-item>
-            </a-assets>
+            <a-entity id="Oxyatom"
+                    position="0 1.5 0"
+                    rotation="0 0 0"
+                    scale="0.3 0.3 0.3"
+                    gltf-model="#Oatom"
+                    animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
+                    visible="true">
+          </a-entity>
         </a-marker>
 
 <!--Deliverable 2-->
